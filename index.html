@@ -16,6 +16,8 @@
             justify-content: center;
             height: 100vh;
             background-size: cover; 
+            background-image: url('https://images.unsplash.com/photo-1601134467661-3d775b999c8b?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
 
         }
 
@@ -71,14 +73,58 @@
         #search-button:hover {
             background-color: #45a049;
         }
+
+        #forecast-box {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 300px; /* Adjust the width as needed */
+            overflow: auto; /* Add scrollbar if content exceeds box height */
+        }
+
+        /* Adjust the styles for the forecast box content as needed */
+        #forecast-box h2 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        #forecast-box ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #forecast-box li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        #forecast-box li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        #forecast-box strong {
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Weather App</h1>
+    <h1>Weather</h1>
     <div id="weather-info">
-        <img src="https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-03-512.png" alt="Weather Icon">
+         <!--<img src="https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-03-512.png" alt="Weather Icon">  -->
         <h2>Welcome!</h2>
         <p>Please enter a city.</p>
+    </div>
+     <div id="forecast-box">
+        <!-- Forecast will be displayed here -->
     </div>
     <div id="search-container">
         <input type="text" id="city-input" placeholder="Enter city name">
